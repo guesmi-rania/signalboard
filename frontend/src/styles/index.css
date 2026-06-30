@@ -1,0 +1,66 @@
+:root {
+  /* Color tokens — deep teal-charcoal console, copper for momentum, cyan for "live" */
+  --bg-base: #0f1d1a;
+  --bg-panel: #16302b;
+  --bg-panel-raised: #1c3a33;
+  --line: #2c4a42;
+  --text-primary: #ede9e0;
+  --text-muted: #8fa39d;
+  --accent-copper: #d98e4a;
+  --accent-copper-dim: #8a5f37;
+  --accent-cyan: #5fd4c4;
+  --accent-rose: #c97a8a;
+
+  /* Type */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-base);
+  background-image: radial-gradient(circle at 15% 0%, rgba(95, 212, 196, 0.06), transparent 45%),
+    radial-gradient(circle at 85% 100%, rgba(217, 142, 74, 0.06), transparent 45%);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent-copper);
+  color: var(--bg-base);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
